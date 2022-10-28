@@ -1,6 +1,6 @@
+require('dotenv').config();
 const schedule = require('node-schedule')
 const request = require('request');
-require('dotenv').config();
 
 // 定時呼叫自己，防止睡眠
 exports.cronCallMysell = function () {
