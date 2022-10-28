@@ -3,7 +3,7 @@ require('dotenv').config();
 // 健康狀態
 require('./jsHome/healthCheck.js').start();
 // 定時作業工具
-const cornTask = require('./sideJS/cronTask.js');
+const cornTask = require('./jsHome/cronTask.js');
 // discord library
 const Discord = require('discord.js');
 const client = new Discord.Client();
