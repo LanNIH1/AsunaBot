@@ -1,0 +1,16 @@
+{
+  "name": "asunabot",
+  "version": "1.0.0",
+  "description": "bot",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
