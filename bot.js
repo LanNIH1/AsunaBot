@@ -1,9 +1,5 @@
 // 載入env變量
 require('dotenv').config();
-// 健康狀態
-require('./jsHome/healthCheck.js').start();
-// 定時作業工具
-const cornTask = require('./jsHome/cronTask.js');
 // discord library
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -16,7 +12,6 @@ client.login(process.env.TOKEN);
 
 // 登入成功後觸發一次
 client.on('ready',() => {
-    cornTask.start();
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
@@ -29,3 +24,7 @@ client.on('message', msg => {
     }
   }
 });
+    
+   
+
+    
