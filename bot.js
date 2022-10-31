@@ -34,7 +34,7 @@ client.on('message', msg => {
 });
 
 const exampleEmbed = new EmbedBuilder()
-	.setColor(9370db)
+	.setColor(9966cc)
 	.setTitle('SGO CBT2 樓層情報')
 	.setAuthor({ name: 'Argo', iconURL: 'https://imgur.com/LKMOgsP.jpg', url: 'https://swordgale.online/' })
 	.setDescription('SGO CBT2 樓層怪物情報（非完整）')
