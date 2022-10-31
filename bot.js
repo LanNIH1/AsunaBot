@@ -29,3 +29,30 @@ client.on('message', msg => {
     }
   }
 });
+
+
+class embed{
+
+  get color('##9370db')
+  get title('SGO CBT 2 樓層情報')
+  get field()
+  get description('封測前四層樓層情報')
+
+};
+
+
+const embed = new Discord.MessageEmbed()
+      .setColor('##9370db')
+      .setTitle('SGO CBT 2 樓層情報')
+      .setAuthor('Author', 'Author2', 'Author3')
+      .setDescription('封測前四層樓層情報')
+      .setThumbnail('thumbnail')
+      .addField('Regular field title', 'Some value here')
+      .addField('\u200B', '\u200B')
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here', true)
+      .addField('Inline field title', 'Some value here', true)
+      .setImage('https://i.imgur.com/wSTFkRM.png')
+      .setTimestamp()
+      .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+msg.channel.send(embed);
