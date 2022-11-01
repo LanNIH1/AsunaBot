@@ -37,3 +37,37 @@ client.on('message', msg => {
 });
 
 
+client.on('message', message => {
+  //メッセージを入る
+  if (message.content === 'sgo floor') {
+    const embed = new Discord.MessageEmbed()
+    //タイトルを設定する
+    .setTitle('SGO CBT2 樓層怪物一覽')
+    //エっジカーラーを設定する
+    .setColor(0x660099)
+    //内容を設定する
+    .setDescription(
+      '資料仍有缺漏，僅供參考' + '\n' +
+      '－－－－－－－－－' + '\n' +
+      '第一層' + ' ' + '大草原' + '  ' +
+      '第二層' + ' ' + '猛牛園' + '  ' + '\n' +
+      '第三層' + ' ' + '兒童樂園' + '  ' +
+      '第四層' + ' ' + '蘑菇園' + '  ' + '\n' +
+      '第五層' + ' ' + '圓明園' + '  ' +
+      '第六層' + ' ' + '封測限定對戰塔' + '  ' + '\n' )
+    //作者のアイコン、タイトル、url
+    .setAuthor('Argo', 'https://imgur.com/bDEucFO.jpg', 'https://swordgale.online/')
+    //右上のサムネイルがどこかわからない
+    //.setThumbnail(https://imgur.com/LKMOgsP.jpg)
+    //下の文字、画像
+    .setFooter('Writen by Argo','https://imgur.com/bDEucFO.jpg')
+    //時間表示
+    .setTimestamp(Date.now())
+    //タイトルURL
+    //.setURL('https://www.youtube.com/');
+    //設定圖片
+    .setImage('https://imgur.com/pdA0tf1.jpg');
+    message.channel.send(embed);
+  }});
+  
+
