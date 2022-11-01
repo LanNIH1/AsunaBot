@@ -80,7 +80,7 @@ client.on('message', message => {
       .setColor(0x660099)
       //内容を設定する
       .setDescription(
-        '各種資訊導引' + '\n' + '\n' +  '\n' + '\n'+
+        '**各種資訊導引**' + '\n' + '\n' +  '\n' + '\n'+
         '**樓層指南**' +'\n' +
         'sgo floor' + '\n' + '\n' +
         '**Makushi的攻略情報**' +'\n' +
