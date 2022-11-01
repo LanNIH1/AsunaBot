@@ -36,7 +36,6 @@ client.on('message', msg => {
   }
 });
 
-
 client.on('message', message => {
   //メッセージを入る
   if (message.content === 'sgo floor') {
