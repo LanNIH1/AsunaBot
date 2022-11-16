@@ -101,3 +101,12 @@ client.on("message", message => {
       message.channel.send(embed);
     }});
 
+    client.on("message", msg => {
+      for (let i = 0; i < newreplay?.length; i++) {
+        if (msg.content === newreplay[i]?.content) {
+          message.channel.send(newreplay[i]?.send);
+          break;
+        }
+      }
+    });
+    
