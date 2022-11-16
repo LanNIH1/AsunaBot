@@ -10,6 +10,8 @@ const client = new Discord.Client();
 
 // 聊天字典(DB)
 const messageData = require("./messageData.json");
+const messageData = require("./newreplay.json");
+
 //嵌入內容
 const { EmbedBuilder } = require("discord.js");
 
