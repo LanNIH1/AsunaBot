@@ -30,7 +30,7 @@ client.on("ready", () => {
 client.on("message", msg => {
   for (let i = 0; i < messageData?.length; i++) {
     if (msg.content === messageData[i]?.content) {
-      msg.reply(messageData[i]?.reply);
+      msg.send(messageData[i]?.send);
       break;
     }
   }
