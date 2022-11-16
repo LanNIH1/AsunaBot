@@ -104,3 +104,10 @@ client.on("message", message => {
       }
     });
     
+    client.on('message', message=> {
+      if (message.content === '亞絲娜 轉生'){
+        message.channel.send('https://imgur.com/TxQ6uhn.jpg')
+      }}
+        );
+
+        
