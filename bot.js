@@ -9,7 +9,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 // 聊天字典(DB)
-const messageData = require("./messageData.json");
+
 const messageData = require("./newreplay.json");
 
 //嵌入內容
@@ -29,14 +29,6 @@ client.on("ready", () => {
 });
 
 // messageData 訊息查找&回答
-client.on("message", msg => {
-  for (let i = 0; i < messageData?.length; i++) {
-    if (msg.content === messageData[i]?.content) {
-      msg.replay(messageData[i]?.reply);
-      break;
-    }
-  }
-});
 
 client.on("message", message => {
   //メッセージを入る
