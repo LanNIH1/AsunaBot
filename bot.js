@@ -15,6 +15,8 @@ const messageData = require("./messageData.json");
 //嵌入內容
 const { EmbedBuilder } = require("discord.js");
 
+//指令上限
+client.setMaxListeners(0)
 
 // messageData 訊息查找&回答
 client.on("message", msg => {
@@ -1010,4 +1012,4 @@ client.on("message", message => {
         )
     ;
 
-        
+
