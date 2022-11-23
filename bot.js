@@ -388,12 +388,6 @@ client.on("message", message => {
         )
     ;
     client.on("message", message=> {
-      if (message.content === "打斷"){
-        message.channel.send("https://imgur.com/o5yADly.jpg")
-      }}
-        )
-    ;
-    client.on("message", message=> {
       if (message.content === "打手槍"){
         message.channel.send("https://imgur.com/mPTjwrl.jpg")
       }}
@@ -426,12 +420,6 @@ client.on("message", message => {
     client.on("message", message=> {
       if (message.content === "憤怒毛"){
         message.channel.send("https://imgur.com/AeJmXfv.jpg")
-      }}
-        )
-    ;
-    client.on("message", message=> {
-      if (message.content === "破關"){
-        message.channel.send("https://imgur.com/PrPHWKn.jpg")
       }}
         )
     ;
