@@ -419,7 +419,7 @@ client.on("message", message => {
     ;
     client.on("message", message=> {
       if (message.content === "憤怒班長"){
-        message.channel.send("https://imgur.com/mPTjwrl.jpg")
+        message.channel.send("https://imgur.com/jvdM9yr.jpg")
       }}
         )
     ;
