@@ -20,7 +20,7 @@ const { EmbedBuilder } = require("discord.js");
 client.on("message", msg => {
   for (let i = 0; i < messageData?.length; i++) {
     if (msg.content === messageData[i]?.content) {
-      msg.replay(messageData[i]?.reply);
+      msg.reply(messageData[i]?.reply);
       break;
     }
   }
