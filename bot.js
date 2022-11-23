@@ -42,7 +42,16 @@ client.on("ready", () => {
 
 // messageData 訊息查找&回答
 
-client.on("message", message => {
+client.on("message", msg => {
+  for (let i = 0; i < messageData?.length; i++) {
+    if (msg.content === messageData[i]?.content) {
+      msg.replay(messageData[i]?.reply);
+      break;
+    }
+  }
+});
+ 
+
   //メッセージを入る
   if (message.content === "sgo floor") {
     const embed = new Discord.MessageEmbed()
@@ -74,7 +83,7 @@ client.on("message", message => {
     //設定圖片
     .setImage("https://imgur.com/pdA0tf1.jpg");
     message.channel.send(embed);
-  }});
+  };
 
     
   client.on("message", message => {
