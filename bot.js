@@ -42,8 +42,8 @@ require("./jsHome/healthCheck.js").start();
 // 定時作業工具
 const cornTask = require("./jsHome/cronTask.js");
 // discord library
-const Discord = require("discord.js");
-const client = new Discord.Client();
+//const Discord = require("discord.js");
+//const client = new Discord.Client();
 
 // 聊天字典(DB)
 
