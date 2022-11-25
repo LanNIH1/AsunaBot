@@ -1,5 +1,42 @@
 // 載入env變量
 require("dotenv").config();
+
+
+//Discord BDB
+const BDB = require("./baseJS/BaseDiscordBot.js");
+// js
+const CatchF = require("./baseJS/CatchF.js");
+const slashM = require("./slashManager/slashM.js");
+const messageM = require("./messageManager/messageM.js");
+const buttonM = require("./buttonManager/buttonM.js");
+const selectMenuM = require("./selectMenuManager/selectMenuM.js");
+//#endregion
+
+//region Discord宣告
+//region 基本行為 有需要再加
+let client;
+DoStart();
+async function DoStart() {
+	client = await BDB.Login(process.env.TOKEN);
+	BDB.On(client, "ready", DiscordReady);
+	BDB.On(client, "message", messageM.Start);
+	BDB.On(client, "slash", slashM.Start);
+	BDB.On(client, "button", buttonM.Start);
+	BDB.On(client, "selectMenu", selectMenuM.Start);
+}
+
+//endregion
+//region基本方法
+async function DiscordReady() {
+  //系統訊息
+  console.log(`Logged in as ${client.user.tag}!`);
+  //註冊協槓命令
+  CatchF.LogDo("Started refreshing application (/) commands.");
+  slashM.InsertSlash();
+  CatchF.LogDo("Successfully reloaded application (/) commands.")
+}
+
+
 // 健康狀態
 require("./jsHome/healthCheck.js").start();
 // 定時作業工具
