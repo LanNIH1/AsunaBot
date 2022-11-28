@@ -10,6 +10,7 @@ const {
 	ButtonBuilder,
 	SelectMenuBuilder,
 	EmbedBuilder,
+	PartialWebhookMixin,
 } = require("discord.js");
 const client = new Client({
 	intents: [
